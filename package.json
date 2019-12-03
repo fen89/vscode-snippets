@@ -24,10 +24,6 @@
     "Vue",
     "VueJs"
   ],
-  "scripts": {
-    "package": "npx vsce package",
-    "publish": "npx vsce publish"
-  },
   "extensionKind": "ui",
   "contributes": {
     "snippets": [
@@ -56,5 +52,37 @@
         "path": "./snippets/typescript-vue.json"
       }
     ]
+  },
+  "scripts": {
+    "release": "standard-version",
+    "package": "npx vsce package",
+    "publish": "npx vsce publish",
+    "commit": "git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -e $GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,md,ts}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "git-cz": "^3.3.0",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1",
+    "standard-version": "^7.0.1"
   }
 }
