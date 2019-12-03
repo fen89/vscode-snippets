@@ -1,0 +1,27 @@
+{
+  "Import Module": {
+    "prefix": "imp",
+    "body": "import ${2:moduleName} from '${1:module}';$0",
+    "description": "Imports entire module statement"
+  },
+  "Import Entire Module": {
+    "prefix": "import-no-name",
+    "body": "import '${1:module}';$0",
+    "description": "Imports entire module without module name"
+  },
+  "Import Single Part of a Module": {
+    "prefix": "import-dest",
+    "body": "import { $2 } from '${1:module}';$0",
+    "description": "Imports only a portion of the module"
+  },
+  "Import Everything": {
+    "prefix": "import-all",
+    "body": "import * as ${2:alias} from '${1:module}';$0",
+    "description": "Imports everything as alias from the module"
+  },
+  "Import Single Part of a Module with different name": {
+    "prefix": "import-as",
+    "body": "import { ${2:originalName} as ${3:alias} } from '${1:module}';$0",
+    "description": "Imports a specific portion of the module by assigning a local alias"
+  }
+}

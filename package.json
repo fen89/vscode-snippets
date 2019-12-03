@@ -1,0 +1,60 @@
+{
+  "name": "vscode-snippets",
+  "publisher": "fen89",
+  "displayName": "Useful Snippets",
+  "description": "Useful Snippets for VS Code",
+  "icon": "images/code.png",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fen89/vscode-snippets"
+  },
+  "engines": {
+    "vscode": "^1.20.0"
+  },
+  "categories": [
+    "Snippets",
+    "Other"
+  ],
+  "keywords": [
+    "JavaScript",
+    "TypeScript",
+    "Angular",
+    "Angular 2",
+    "Vue",
+    "VueJs"
+  ],
+  "scripts": {
+    "package": "npx vsce package",
+    "publish": "npx vsce publish"
+  },
+  "extensionKind": "ui",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/console.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/console.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/javascript.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/typescript-vue.json"
+      }
+    ]
+  }
+}

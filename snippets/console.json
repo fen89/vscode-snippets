@@ -1,0 +1,37 @@
+{
+  "Console Log": {
+    "prefix": "con-log",
+    "body": "console.log(${1:message});",
+    "description": "Print message"
+  },
+  "Console Log Object": {
+    "prefix": "con-log-obj",
+    "body": "console.log('${1:object} :', ${1:object});",
+    "description": "Print object"
+  },
+  "Console Warning": {
+    "prefix": "con-warn",
+    "body": "console.warn(`${1:string}`);",
+    "description": "Print warning"
+  },
+  "Console Count": {
+    "prefix": "con-count",
+    "body": "console.count(`${1:string}`);",
+    "description": "Count the occurences"
+  },
+  "Console Dir": {
+    "prefix": "con-dir",
+    "body": "console.dir(${1:object});",
+    "description": "Print the object representation"
+  },
+  "Console Error": {
+    "prefix": "con-error",
+    "body": "console.error(${1:object});",
+    "description": "Print error with stacktrace"
+  },
+  "Console Table": {
+    "prefix": "con-table",
+    "body": "console.table(${1:object});",
+    "description": "Print collection as table"
+  }
+}
