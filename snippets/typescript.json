@@ -1,0 +1,17 @@
+{
+  "Base Class": {
+    "prefix": ["ts-class"],
+    "scope": "typescript",
+    "description": "Base class",
+    "body": [
+      "export class ${1:Name} {",
+      "  id: number;",
+      "  name: string;",
+      "",
+      "  constructor(options?: Partial<${1:Name}>) {",
+      "    Object.assign(this, options);",
+      "  }",
+      "}"
+    ]
+  }
+}

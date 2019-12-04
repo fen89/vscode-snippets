@@ -1,6 +1,6 @@
 {
   "Vue Service": {
-    "prefix": "tsvue-service",
+    "prefix": ["tsvue-service", "vue-service"],
     "description": "Vue Service",
     "scope": "typescript",
     "body": [
@@ -51,7 +51,7 @@
     ]
   },
   "Vue Router": {
-    "prefix": "tsvue-router",
+    "prefix": ["tsvue-router", "vue-router"],
     "description": "Vue Router",
     "scope": "typescript",
     "body": [
@@ -88,7 +88,7 @@
     ]
   },
   "Vue Class Component": {
-    "prefix": "tsvue-component",
+    "prefix": ["tsvue-component", "vue-component"],
     "description": "Vue Class Component",
     "body": [
       "<template>",
@@ -109,7 +109,7 @@
   },
 
   "Vue Class Component Property": {
-    "prefix": "tsvue-prop",
+    "prefix": ["tsvue-prop", "vue-prop"],
     "scope": "vue,typescript",
     "description": "Vue Class Component Property",
     "body": "@Prop() readonly ${1:name}!: ${2:type};$0"
@@ -122,7 +122,7 @@
   },
 
   "Vuex Store": {
-    "prefix": "tsvue-store",
+    "prefix": ["tsvue-store", "vuex-store"],
     "scope": "typescript",
     "description": "Vuex store",
     "body": [
@@ -146,7 +146,7 @@
     ]
   },
   "Vuex Store Module": {
-    "prefix": "tsvue-store-module",
+    "prefix": ["tsvue-store-module", "vuex-module"],
     "scope": "typescript",
     "description": "Vuex store module",
     "body": [
@@ -191,7 +191,7 @@
     ]
   },
   "Vuex Store Model": {
-    "prefix": "tsvue-store-model",
+    "prefix": ["tsvue-store-model", "vuex-model"],
     "scope": "typescript",
     "description": "Vuex store model",
     "body": [
@@ -216,23 +216,6 @@
       " */",
       "export function update${1:Name}(${2:name}: I${1:Name}, fieldsToUpdate?: Partial<I${1:Name}>) {",
       "  return { ...${2:name}, ...fieldsToUpdate };",
-      "}",
-      "",
-      ""
-    ]
-  },
-  "Vue Class": {
-    "prefix": "tsvue-class",
-    "scope": "typescript",
-    "description": "Vue class",
-    "body": [
-      "export class ${1:Name} {",
-      "  id: number;",
-      "  name: string;",
-      "",
-      "  constructor(options?: Partial<${1:Name}>) {",
-      "    Object.assign(this, options);",
-      "  }",
       "}"
     ]
   }

@@ -49,7 +49,11 @@
       },
       {
         "language": "typescript",
-        "path": "./snippets/typescript-vue.json"
+        "path": "./snippets/typescript.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/vue.json"
       }
     ]
   },
