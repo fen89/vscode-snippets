@@ -1,0 +1,168 @@
+{
+  "Angular Module": {
+    "prefix": "ng-module",
+    "body": [
+      "import { NgModule } from '@angular/core';",
+      "",
+      "@NgModule({",
+      "    imports: [],",
+      "    exports: [],",
+      "    declarations: [],",
+      "    providers: [],",
+      "})",
+      "export class ${1:Name}Module { }"
+    ],
+    "description": "Angular Module"
+  },
+  "Angular Module with routing": {
+    "prefix": "ng-module-with-routing",
+    "body": [
+      "import { NgModule } from '@angular/core';",
+      "import { Routes, RouterModule } from '@angular/router';",
+      "",
+      "const routes: Routes = [$2];",
+      "",
+      "@NgModule({",
+      "    imports: [RouterModule.forChild(routes)],",
+      "    exports: [],",
+      "    declarations: [],",
+      "})",
+      "export class ${1:Name}Module { }"
+    ],
+    "description": "Angular Module with routing"
+  },
+  "Angular Service": {
+    "prefix": "ng-service",
+    "body": [
+      "import { Injectable } from '@angular/core';",
+      "",
+      "@Injectable({providedIn: 'root'})",
+      "export class ${1:Name}Service {",
+      "    constructor() { }$2",
+      "}"
+    ],
+    "description": "Angular Service"
+  },
+  "Angular Component": {
+    "prefix": "ng-component",
+    "body": [
+      "import { Component, OnInit, OnDestroy, ChangeDetectionStrategy } from '@angular/core';",
+      "",
+      "@Component({",
+      "    selector: '${1:selector-name}',",
+      "    templateUrl: '${2:name}.component.html',",
+      "    styleUrls: ['./${2:name}.component.scss'],",
+      "    changeDetection: ChangeDetectionStrategy.OnPush",
+      "})",
+      "export class NameComponent implements OnInit {",
+      "    constructor() { }",
+      "",
+      "    ngOnInit() { }$3",
+      "}"
+    ],
+    "description": "Angular Component"
+  },
+  "Angular Directive": {
+    "prefix": "ng-directive",
+    "body": [
+      "import { Directive, ElementRef } from '@angular/core';",
+      "",
+      "@Directive({ selector: '[${1:selector-name}]' })",
+      "export class ${1:Name}Directive {",
+      "    constructor(private el: ElementRef<HTMLElement>) { }",
+      "}"
+    ],
+    "description": "Angular Directive"
+  },
+  "Angular Guard": {
+    "prefix": "ng-guard",
+    "body": [
+      "import { Injectable } from '@angular/core';",
+      "import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot } from '@angular/router';",
+      "",
+      "@Injectable({providedIn: ${2:'root'}})",
+      "export class ${1:Name}Guard implements CanActivate {",
+      "    constructor() { }",
+      "",
+      "    canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {",
+      "        return true;$3",
+      "    }",
+      "}"
+    ],
+    "description": "Angular Guard"
+  },
+  "Angular Http Interceptor": {
+    "prefix": "ng-interceptor",
+    "body": [
+      "import { Injectable } from '@angular/core';",
+      "import { HttpInterceptor, HttpEvent, HttpHandler, HttpRequest } from '@angular/common/http';",
+      "import { Observable } from 'rxjs';",
+      "",
+      "@Injectable({ providedIn: ${2:'root'} })",
+      "export class ${1:Name}Interceptor implements HttpInterceptor {",
+      "    intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {",
+      "        return next.handle(req);$3",
+      "    }",
+      "}"
+    ],
+    "description": "Angular Http Interceptor"
+  },
+  "Angular Pipe": {
+    "prefix": "ng-pipe",
+    "body": [
+      "import { Pipe, PipeTransform } from '@angular/core';",
+      "",
+      "@Pipe({ name: ${1:'selector-name'} })",
+      "export class ${2:Name}Pipe implements PipeTransform {",
+      "    transform(value: any, ...args: any[]): any {",
+      "        $3",
+      "    }",
+      "}"
+    ],
+    "description": "Angular Pipe"
+  },
+  "Angular 404 Route": {
+    "prefix": "ng-route-404",
+    "body": ["{ path: '**', component: ${1:PathNotFoundComponent} }"],
+    "description": "Angular 404 Route"
+  },
+  "Angular Default Route": {
+    "prefix": "ng-route-default",
+    "body": ["{ path: '', pathMatch: 'full', redirectTo: '${1:path}' }"],
+    "description": "Angular Default Route"
+  },
+  "Angular Eager Route": {
+    "prefix": "ng-route-eager",
+    "body": ["{ path: '${1:path}', component: ${2:NameComponent},"],
+    "description": "Angular Eager Route"
+  },
+  "Angular Lazy Route": {
+    "prefix": "ng-route-lazy",
+    "body": [
+      "{",
+      "    path: '${1:path}', ",
+      "    loadChildren: () => import('${2:lazy-path}').then(m => m.${3:lazy-module})",
+      "},"
+    ],
+    "description": "Angular Lazy Route"
+  },
+  "Angular Route with Children": {
+    "prefix": "ng-route-children",
+    "body": [
+      "{",
+      "    path: '${1:path}', ",
+      "    component: ${2:Component},",
+      "    children: [",
+      "        { path: '${3:childPath}', component: ${4:ChildComponent }}$5",
+      "    ]",
+      "}"
+    ],
+    "description": "Angular Route with Children"
+  },
+
+  "Angular @Output EventEmitter": {
+    "prefix": "ng-output",
+    "body": ["@Output() ${1:name}= new EventEmitter<${1:type}>();"],
+    "description": "Angular @Output EventEmitter"
+  }
+}
