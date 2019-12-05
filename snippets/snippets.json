@@ -1,6 +1,6 @@
 {
   "Import Module": {
-    "prefix": "imp",
+    "prefix": "import",
     "body": "import ${2:moduleName} from '${1:module}';$0",
     "description": "Imports entire module statement"
   },
@@ -10,7 +10,7 @@
     "description": "Imports entire module without module name"
   },
   "Import Single Part of a Module": {
-    "prefix": "import-dest",
+    "prefix": "import-part",
     "body": "import { $2 } from '${1:module}';$0",
     "description": "Imports only a portion of the module"
   },

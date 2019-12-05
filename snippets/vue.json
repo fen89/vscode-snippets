@@ -115,7 +115,7 @@
     "body": "@Prop() readonly ${1:name}!: ${2:type};$0"
   },
   "Vue Class Component Property with default value": {
-    "prefix": "tsvue-prop-default",
+    "prefix": ["tsvue-prop-default", "vue-prop-default"],
     "scope": "vue,typescript",
     "description": "Vue Class Component Property /w default value",
     "body": "@Prop({ default: ${3:false} }) readonly ${1:name}!: ${2:boolean};$0"
@@ -146,7 +146,7 @@
     ]
   },
   "Vuex Store Module": {
-    "prefix": ["tsvue-store-module", "vuex-module"],
+    "prefix": ["tsvue-store-module", "vuex-store-module"],
     "scope": "typescript",
     "description": "Vuex store module",
     "body": [

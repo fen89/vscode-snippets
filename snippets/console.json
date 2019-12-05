@@ -1,36 +1,36 @@
 {
   "Console Log": {
-    "prefix": "con-log",
+    "prefix": ["clog"],
     "body": "console.log(${1:message});",
     "description": "Print message"
   },
   "Console Log Object": {
-    "prefix": "con-log-obj",
+    "prefix": ["clogo"],
     "body": "console.log('${1:object} :', ${1:object});",
     "description": "Print object"
   },
   "Console Warning": {
-    "prefix": "con-warn",
+    "prefix": ["cwarn"],
     "body": "console.warn(`${1:string}`);",
     "description": "Print warning"
   },
   "Console Count": {
-    "prefix": "con-count",
+    "prefix": ["ccount "],
     "body": "console.count(`${1:string}`);",
     "description": "Count the occurences"
   },
   "Console Dir": {
-    "prefix": "con-dir",
+    "prefix": ["cdir"],
     "body": "console.dir(${1:object});",
     "description": "Print the object representation"
   },
   "Console Error": {
-    "prefix": "con-error",
+    "prefix": ["cerror"],
     "body": "console.error(${1:object});",
     "description": "Print error with stacktrace"
   },
   "Console Table": {
-    "prefix": "con-table",
+    "prefix": ["ctable"],
     "body": "console.table(${1:object});",
     "description": "Print collection as table"
   }
