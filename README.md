@@ -1,67 +1,77 @@
 # Useful VS Code Snippets
 
-**Under construction**
+Visual Studio Code Snippets for daily use with Angular, Vue, Typescript and Javascript.
 
-<!-- This is the README for your extension "vscode-snippets". After writing up a brief description, we recommend including the following sections. -->
+![Use Extension](images/use-extension.gif)
 
-<!-- ## Features
+See the [CHANGELOG](CHANGELOG.md) for the latest changes.
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## Usage
 
-For example if there is an image subfolder under your extension project workspace:
+Type part of a snippet, press `enter` and the snippet unfolds. Pressing space at anytime shows the description and preview of a snippet.
 
-\!\[feature X\]\(images/feature-x.png\)
+### General Snippets
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+| Snippet          | Description                                                                                       |
+| ---------------- | ------------------------------------------------------------------------------------------------- |
+| `import`         | Import entire module: `import Module from 'module'`                                               |
+| `import-no-name` | Import entire module without module name: `import 'module'`                                       |
+| `import-all`     | Import all as alias from module: `import * as alias from 'module'`                                |
+| `import-part`    | Import only a specific part from a module: `import { part } from 'module'`                        |
+| `import-as`      | Import only a specific part from a module with an alias: `import { part as alias } from 'module'` |
+| `clog`           | Print a message to the console: `console.log(message)`                                            |
+| `clogo`          | Print object to the console: `console.log('object': object)`                                      |
+| `cwarn`          | Print warning to console: `console.warn(message)`                                                 |
+| `ccount`         | Print occurrences to console: `console.count(message)`                                            |
+| `cdir`           | Print object represantation: `console.dir(object)`                                                |
+| `cerror`         | Print error: `console.error(object)`                                                              |
+| `ctable`         | Print a collection as table: `console.table(collection)`                                          |
 
-## Requirements
+### Typescript Snippets
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+| Snippet    | Description                             |
+| ---------- | --------------------------------------- |
+| `ts-class` | Class with `Partial` constructor assign |
 
-## Extension Settings
+### Typescript Angular Snippets
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+| Snippet                  | Description                                |
+| ------------------------ | ------------------------------------------ |
+| `ng-module`              | Module                                     |
+| `ng-module-with-routing` | Module with Routing (for child)            |
+| `ng-service`             | Service (provided in root)                 |
+| `ng-component`           | Component (change detection on push)       |
+| `ng-directive`           | Directive                                  |
+| `ng-guard`               | Guard (can activate)                       |
+| `ng-interceptor`         | Http Interceptor                           |
+| `ng-pipe`                | Pipe                                       |
+| `ng-route-404`           | 404 Route                                  |
+| `ng-route-default`       | Default Route                              |
+| `ng-route-eager`         | Eager Loaded Route                         |
+| `ng-route-lazy`          | Lazy Loaded Route (with new import syntax) |
+| `ng-route-children`      | Route with children                        |
+| `ng-output`              | `@Output`event emitter                     |
 
-For example:
+### Typescript Vue Snippets
 
-This extension contributes the following settings:
+| Snippet             | Description                                                       |
+| ------------------- | ----------------------------------------------------------------- |
+| `vue-service`       | Service                                                           |
+| `vue-router`        | Router                                                            |
+| `vue-component`     | Component with `vue-class-component` and `vue-property-decorator` |
+| `vue-prop`          | Property with `vue-property-decorator`                            |
+| `vue-prop-default`  | Property with `vue-property-decorator` and default value          |
+| `vuex-store`        | Dynamic Vuex Store                                                |
+| `vuex-store-module` | Dynamic Vuex Store Module                                         |
+| `vuex-model`        | Interface and class with `create` and `update` functions          |
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+## Emmet
 
-## Known Issues
+If you want intellisense to show emmet before the snippets, you can force the emmet suggestions to show up at the top, by add the following to your editor user settings:
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!** -->
+```javascript
+{
+  "emmet.showSuggestionsAsSnippets": true,
+  "editor.snippetSuggestions": "top"
+}
+```
