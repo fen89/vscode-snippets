@@ -24,7 +24,9 @@
     "Vue",
     "VueJs"
   ],
-  "extensionKind": "ui",
+  "extensionKind": [
+    "ui"
+  ],
   "contributes": {
     "snippets": [
       {
@@ -52,12 +54,24 @@
         "path": "./snippets/typescript.json"
       },
       {
-        "language": "typescript",
+        "language": "vue",
         "path": "./snippets/vue.json"
       },
-            {
+      {
         "language": "typescript",
-        "path": "./snippets/angular.json"
+        "path": "./snippets/typescript-vue.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/typescript-vue-class.json"
+      },
+      {
+        "language": "vue-html",
+        "path": "./snippets/vue-html.json"
+      },
+      {
+        "language": "html",
+        "path": "./snippets/vue-html.json"
       }
     ]
   },

@@ -1,0 +1,154 @@
+{
+  "Vue Global Component": {
+    "prefix": "v-global-component",
+    "body": ["Vue.component('${1:name}', ${2:Component})"],
+    "description": "Register global component"
+  },
+
+  "Vue Router Class": {
+    "prefix": "v-router-class",
+    "description": "Vue Router File",
+    "body": [
+      "import Vue from 'vue';",
+      "import VueRouter from 'vue-router';",
+      "",
+      "Vue.use(VueRouter);",
+      "",
+      "const routes = [$0];",
+      "",
+      "const router = new VueRouter({",
+      "  mode: 'history',",
+      "  routes,",
+      "});",
+      "",
+      "export default router;",
+      ""
+    ]
+  },
+  "Vue Default Route": {
+    "prefix": "v-route-default",
+    "body": ["{ path: '', redirect: '${1:path}' }"],
+    "description": "Vue Default Route"
+  },
+  "Vue Eager Route": {
+    "prefix": "v-route-eager",
+    "body": [
+      " { path: '${1:path}', name: '${2:name}', component: ${3:NameComponent}}"
+    ],
+    "description": "Vue Default Route"
+  },
+  "Vue Lazy Route": {
+    "prefix": "v-route-lazy",
+    "body": [
+      "{ path: '${1:path}', name: '${2:name}', component: () => import(/* webpackChunkName: \\\"${2:example}\\\" */ '${1:pathToComponent}')"
+    ],
+    "description": "Vue Lazy Route"
+  },
+  "Vue Route with Children": {
+    "prefix": "v-route-children",
+    "body": [
+      "{ path: '${1:path}', component: ${1:Component},",
+      "      children: [",
+      "        { path: '${3:childPath}', component: ${4:ChildComponent} }",
+      "      ]",
+      "}"
+    ],
+    "description": "Vue Route with Children"
+  },
+
+  "Vuex Store": {
+    "prefix": "v-store",
+    "description": "Vuex store",
+    "body": [
+      "import Vue from 'vue';",
+      "import Vuex from 'vuex';",
+      "",
+      "Vue.use(Vuex);",
+      "",
+      "const store = new Vuex.Store({",
+      "  strict: true,",
+      "  state: {",
+      "    version: '1.0.0',",
+      "  },",
+      "  modules: {",
+      "    /* they are injected dynamically, see /modules folder */",
+      "  },",
+      "});",
+      "",
+      "export default store;",
+      ""
+    ]
+  },
+  "Vuex Store Module": {
+    "prefix": "v-store-module",
+    "description": "Vuex store module",
+    "body": [
+      "import { Action, Module, Mutation, VuexModule } from 'vuex-module-decorators';",
+      "import store from '..';",
+      "",
+      "@Module({",
+      "  dynamic: true,",
+      "  store,",
+      "  namespaced: true,",
+      "  name: '${1:name}'",
+      "})",
+      "export default class ${2:Name}StateModule extends VuexModule {",
+      "  collection: I${2:Name}[] = [];",
+      "",
+      "  @Mutation",
+      "  setCollection(orders: I${2:Name}[]) {",
+      "    this.collection = orders;",
+      "  }",
+      "",
+      "  @Mutation",
+      "  resetState() {",
+      "    this.collection = [];",
+      "  }",
+      "",
+      "  @Action",
+      "  async fetch() {",
+      "    // const result = await service.list();",
+      "",
+      "    // if (result.succeeded) {",
+      "    //   const { data } = result;",
+      "    //   this.context.commit('setCollection', data.data);",
+      "    // }",
+      "  }",
+      "",
+      "  @Action",
+      "  reset() {",
+      "    this.context.commit('resetState');",
+      "  }",
+      "}",
+      ""
+    ]
+  },
+  "Vuex Store Model": {
+    "prefix": "v-store-model",
+    "description": "Vuex store model",
+    "body": [
+      "export interface I${1:Name} {",
+      "  id: number;",
+      "}",
+      "",
+      "/**",
+      " * Create a ${2:name}",
+      " */",
+      "export function create${1:Name}(${2:name}: Partial<I${1:Name}>) {",
+      "  return {",
+      "    id: ${2:name}.id,",
+      "  } as I${1:Name};",
+      "}",
+      "",
+      "/**",
+      " * Update a ${2:name}",
+      " * @param ${2:name} the ${2:name} to update",
+      " * @param fieldsToUpdate the fields to update on the ${2:name}",
+      " * @example const result = update${1:Name}(${2:name}, { id: 1 })",
+      " */",
+      "export function update${1:Name}(${2:name}: I${1:Name}, fieldsToUpdate?: Partial<I${1:Name}>) {",
+      "  return { ...${2:name}, ...fieldsToUpdate };",
+      "}"
+    ]
+  }
+}

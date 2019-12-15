@@ -1,0 +1,72 @@
+{
+  "Vue Property": {
+    "prefix": "v-prop",
+    "description": "Property",
+    "body": ["@Prop() readonly ${1:name}!: ${2:boolean};"]
+  },
+  "Vue Property with default value": {
+    "prefix": "v-prop-default",
+    "description": "Property /w default value",
+    "body": [
+      "@Prop({ default: ${3:'name'} }) readonly ${1:name}!: ${2:string};"
+    ]
+  },
+
+  "Vue Reactive Property": {
+    "prefix": "v-prop-sync",
+    "description": "Reactive Property",
+    "body": "@PropSync() readonly ${1:syncedName}!: ${2:string};"
+  },
+  "Vue Reactive Property with default value": {
+    "prefix": "v-prop-sync-default",
+    "description": "Reactive Property",
+    "body": "@PropSync({ default: ${3:'syncedName'} }) readonly ${1:name}!: ${2:boolean};"
+  },
+
+  "Vue Model": {
+    "prefix": "v-model",
+    "description": "Model",
+    "body": [
+      "@Model('${1:'change'}, { type: ${2/capitalize:type} }) readonly checked!: ${2/downcase:type};"
+    ]
+  },
+
+  "Vue Watch": {
+    "prefix": "v-watch",
+    "description": "Watcher",
+    "body": [
+      "@Watch('${1:value}')",
+      "on${1/capitalize:value}Changed(value: ${2:Type}, oldValue: ${2:Type}) {$0}"
+    ]
+  },
+  "Vue Watch Options": {
+    "prefix": "v-watch-options",
+    "description": "Watcher with default options",
+    "body": [
+      "@Watch('${1:value}', { immediate: true, deep: true })",
+      "on${1/capitalize:value}Changed(value: ${2:Type}, oldValue: ${2:Type}) {$0}"
+    ]
+  },
+
+  "Vue Emit Self": {
+    "prefix": "v-emit-self",
+    "description": "Event Emitter - method name is used as $emit",
+    "body": ["@Emit()", "${1:method}() {", "\t$0", "}"]
+  },
+  "Vue Emit": {
+    "prefix": "v-emit",
+    "description": "Event Emitter - name is used as $emit",
+    "body": ["@Emit('${1:name}')", "${2:method}() {", "\t$0", "}"]
+  },
+
+  "Vue Ref": {
+    "prefix": "v-ref",
+    "description": "Reference to another component",
+    "body": ["@Ref() readonly ${1:name}!: ${2:component}"]
+  },
+  "Vue Ref Key": {
+    "prefix": "v-ref-key",
+    "description": "Reference to another HTML element",
+    "body": ["@Ref('${1:key}') readonly ${2:name}!: ${3:HTMLElement}"]
+  }
+}

@@ -1,6 +1,6 @@
 {
   "Base Class": {
-    "prefix": ["ts-class"],
+    "prefix": "ts-class",
     "scope": "typescript",
     "description": "Base class",
     "body": [

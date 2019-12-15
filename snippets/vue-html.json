@@ -1,0 +1,125 @@
+{
+  "Vue v-html": {
+    "prefix": "v-html",
+    "body": ["<${1:div} v-html=\"${2:rawHtml}\">", "<${1:div}>"],
+    "description": "v-html statement"
+  },
+
+  "Vue v-class": {
+    "prefix": "v-class",
+    "body": [":class=\"{ ${1:cssClass}: ${3:expression} }\""],
+    "description": "v-bind:class statement"
+  },
+
+  "Vue v-if": {
+    "prefix": "v-if",
+    "body": ["<${1:div} v-if=\"${2:expression}\">", "\t$0", "<${1:div}>"],
+    "description": "v-if statement"
+  },
+  "Vue v-if-else": {
+    "prefix": "v-if-else",
+    "body": [
+      "<${1:div} v-if=\"${2:expression}\">",
+      "\t$0",
+      "<${1:div}>",
+      "<${1:div} v-else>",
+      "\t",
+      "<${1:div}>"
+    ],
+    "description": "v-if with else statement"
+  },
+  "Vue v-if-else-if": {
+    "prefix": "v-else-if",
+    "body": [
+      "<${1:div} v-if=\"${2:expression}\">",
+      "\t$0",
+      "<${1:div}>",
+      "<${1:div} v-else-if=\"${3:expression}\">",
+      "\t",
+      "<${1:div}>",
+      "<${1:div} v-else>",
+      "\t",
+      "<${1:div}>"
+    ],
+    "description": "v-if with else-if and else statement"
+  },
+
+  "Vue v-show": {
+    "prefix": "v-show",
+    "body": ["<${1:div} v-show=\"${2:expression}\">", "\t$0", "<${1:div}>"],
+    "description": "v-show statement"
+  },
+
+  "Vue v-for": {
+    "prefix": "v-for",
+    "body": [
+      "<${1:div} v-for=\"${2:item} in ${2:item}s\" :key=\"${2:item}.${3:id}\">",
+      "\t{{ ${2:item} }}$0",
+      "</${1:div}>"
+    ],
+    "description": "v-for statement"
+  },
+  "Vue indexed v-for": {
+    "prefix": "v-for-index",
+    "body": [
+      "<${1:div} v-for=\"(${2:item}, index) in ${2:item}s\" :key=\"${2:item}.${3:id}\">",
+      "\t{{ ${2:item} }}$0",
+      "</${1:div}>"
+    ],
+    "description": "v-for statement /w index"
+  },
+  "Vue v-for-object": {
+    "prefix": "v-for-object",
+    "body": [
+      "<${1:div} v-for=\"value in ${2:object}\" :key=\"value\">",
+      "\t{{ value }}$0",
+      "</${1:div}>"
+    ],
+    "description": "v-for statement /w object"
+  },
+  "Vue v-for-range": {
+    "prefix": "v-for-range",
+    "body": [
+      "<${1:div} v-for=\"number in ${2:range}\" :key=\"number\">",
+      "\t{{ number }}$0",
+      "</${1:div}>"
+    ],
+    "description": "v-for statement for a range"
+  },
+  "Vue named v-for-object": {
+    "prefix": "v-for-object-named",
+    "body": [
+      "<${1:div} v-for=\"(value, name) in ${2:object}\" :key=\"name\">",
+      "\t{{ name }}: {{ value }}$0",
+      "</${1:div}>"
+    ],
+    "description": "v-for statement /w object"
+  },
+
+  "Vue v-on": {
+    "prefix": "v-on",
+    "body": ["@${1:event}=\"${2:handler}"],
+    "description": "v-on handler"
+  },
+  "Vue v-on with args": {
+    "prefix": "v-on-args",
+    "body": ["@${1:event}=\"${2:handler}(${3:arg}, \\$event)\""],
+    "description": "v-on handler"
+  },
+  "Vue v-on with modifier": {
+    "prefix": "v-on-modified",
+    "body": ["@${1:submit}.${2:prevent}=\"${3:handler}"],
+    "description": "v-on handler with event modifier"
+  },
+
+  "Vue v-model": {
+    "prefix": "v-model",
+    "body": ["<input v-model=\"${1:data}\" type=\"text\" />"],
+    "description": "v-model statement"
+  },
+  "Vue v-model with number": {
+    "prefix": "v-model-number",
+    "body": ["<input v-model.number=\"${1:number}\" type=\"number\" />"],
+    "description": "v-model statement /w number"
+  }
+}

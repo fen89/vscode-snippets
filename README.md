@@ -33,7 +33,7 @@ Type part of a snippet, press `enter` and the snippet unfolds. Pressing space at
 | ---------- | --------------------------------------- |
 | `ts-class` | Class with `Partial` constructor assign |
 
-### Typescript Angular Snippets
+### Angular Typescript Snippets
 
 | Snippet                  | Description                                |
 | ------------------------ | ------------------------------------------ |
@@ -47,23 +47,63 @@ Type part of a snippet, press `enter` and the snippet unfolds. Pressing space at
 | `ng-pipe`                | Pipe                                       |
 | `ng-route-404`           | 404 Route                                  |
 | `ng-route-default`       | Default Route                              |
-| `ng-route-eager`         | Eager Loaded Route                         |
-| `ng-route-lazy`          | Lazy Loaded Route (with new import syntax) |
+| `ng-route-eager`         | Eager loaded Route                         |
+| `ng-route-lazy`          | Lazy loaded Route (with new import syntax) |
 | `ng-route-children`      | Route with children                        |
 | `ng-output`              | `@Output`event emitter                     |
 
-### Typescript Vue Snippets
+### Vue Typescript Snippets
 
-| Snippet             | Description                                                       |
-| ------------------- | ----------------------------------------------------------------- |
-| `vue-service`       | Service                                                           |
-| `vue-router`        | Router                                                            |
-| `vue-component`     | Component with `vue-class-component` and `vue-property-decorator` |
-| `vue-prop`          | Property with `vue-property-decorator`                            |
-| `vue-prop-default`  | Property with `vue-property-decorator` and default value          |
-| `vuex-store`        | Dynamic Vuex Store                                                |
-| `vuex-store-module` | Dynamic Vuex Store Module                                         |
-| `vuex-model`        | Interface and class with `create` and `update` functions          |
+| Snippet              | Description                                                       |
+| -------------------- | ----------------------------------------------------------------- |
+| `v-global-component` | Register a global component                                       |
+| `v-router-class`     | Router Class                                                      |
+| `v-route-default`    | Default Route                                                     |
+| `v-route-eager`      | Eager loaded Route                                                |
+| `v-route-lazy`       | Lazy loaded Route                                                 |
+| `v-route-children`   | Route with children                                               |
+| `v-component`        | Component with `vue-class-component` and `vue-property-decorator` |
+| `v-store`            | Dynamic Vuex Store                                                |
+| `v-store-module`     | Dynamic Vuex Store Module                                         |
+| `v-model`            | Interface and class with `create` and `update` functions          |
+
+### Vue Typescript Class Component Snippets
+
+All of them need a reference to `vue-property-decorator`
+
+| Snippet               | Description                                    |
+| --------------------- | ---------------------------------------------- |
+| `v-prop`              | Property                                       |
+| `v-prop-default`      | Property with default value                    |
+| `v-prop-sync`         | Reactive Property                              |
+| `v-prop-sync-default` | Reactive Property with default value           |
+| `v-model`             | Model                                          |
+| `v-watch`             | Watcher                                        |
+| `v-watch-options`     | Watcher with default options                   |
+| `v-emit`              | Event Emitter - method name is used as `$emit` |
+| `v-emit-self`         | Event Emitter - name is used as `$emit`        |
+| `v-ref`               | Reference to another component                 |
+| `v-ref-key`           | Reference to another HTML element              |
+
+### Vue Html Snippets
+
+| Snippet          | Description                                        |
+| ---------------- | -------------------------------------------------- |
+| `v-html`         | Bind HTML directly to an element with `:html`      |
+| `v-class`        | Bind CSS class to an element with `:class`         |
+| `v-if`           | Conditional statement                              |
+| `v-if-else`      | Conditional statement with else clause             |
+| `v-if-else-if`   | Conditional statement with else-if and else clause |
+| `v-show`         | Displaying or hiding an element with `v:show`      |
+| `v-for`          | Loop                                               |
+| `v-for-index`    | Indexed loop                                       |
+| `v-for-object`   | L                                                  |
+| `v-for-range`    | Loop over a range                                  |
+| `v-on`           | Event Listener                                     |
+| `v-on-args`      | Event Listener with arguments                      |
+| `v-on-modified`  | Event Listener with event modifier                 |
+| `v-model`        | Model                                              |
+| `v-model-number` | Model with type number                             |
 
 ## Emmet
 
