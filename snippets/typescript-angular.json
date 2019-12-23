@@ -38,7 +38,7 @@
       "",
       "@Injectable({providedIn: 'root'})",
       "export class ${1:Name}Service {",
-      "    constructor() { }$2",
+      "    constructor($2) {$0}",
       "}"
     ],
     "description": "Angular Service"
@@ -49,15 +49,15 @@
       "import { Component, OnInit, OnDestroy, ChangeDetectionStrategy } from '@angular/core';",
       "",
       "@Component({",
-      "    selector: '${1:selector-name}',",
+      "    selector: '${1:selector}',",
       "    templateUrl: '${2:name}.component.html',",
       "    styleUrls: ['./${2:name}.component.scss'],",
       "    changeDetection: ChangeDetectionStrategy.OnPush",
       "})",
-      "export class NameComponent implements OnInit {",
-      "    constructor() { }",
+      "export class ${3:Name}Component implements OnInit {",
+      "    constructor($0) { }",
       "",
-      "    ngOnInit() { }$3",
+      "    ngOnInit() { }",
       "}"
     ],
     "description": "Angular Component"
@@ -67,8 +67,8 @@
     "body": [
       "import { Directive, ElementRef } from '@angular/core';",
       "",
-      "@Directive({ selector: '[${1:selector-name}]' })",
-      "export class ${1:Name}Directive {",
+      "@Directive({ selector: '[${1:selector}]' })",
+      "export class ${2:Name}Directive {",
       "    constructor(private el: ElementRef<HTMLElement>) { }",
       "}"
     ],
@@ -85,7 +85,8 @@
       "    constructor() { }",
       "",
       "    canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {",
-      "        return true;$3",
+      "        $0",
+      "        return true;",
       "    }",
       "}"
     ],
@@ -101,7 +102,8 @@
       "@Injectable({ providedIn: ${2:'root'} })",
       "export class ${1:Name}Interceptor implements HttpInterceptor {",
       "    intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {",
-      "        return next.handle(req);$3",
+      "        $0",
+      "        return next.handle(req);",
       "    }",
       "}"
     ],
@@ -112,7 +114,7 @@
     "body": [
       "import { Pipe, PipeTransform } from '@angular/core';",
       "",
-      "@Pipe({ name: ${1:'selector-name'} })",
+      "@Pipe({ name: '${1:selector}' })",
       "export class ${2:Name}Pipe implements PipeTransform {",
       "    transform(value: any, ...args: any[]): any {",
       "        $3",
@@ -128,12 +130,12 @@
   },
   "Angular Default Route": {
     "prefix": "ng-route-default",
-    "body": ["{ path: '', pathMatch: 'full', redirectTo: '${1:path}' }"],
+    "body": ["{ path: '$1', pathMatch: 'full', redirectTo: '${2:path}' }"],
     "description": "Angular Default Route"
   },
   "Angular Eager Route": {
     "prefix": "ng-route-eager",
-    "body": ["{ path: '${1:path}', component: ${2:NameComponent},"],
+    "body": ["{ path: '${1:path}', component: ${2:NameComponent} }"],
     "description": "Angular Eager Route"
   },
   "Angular Lazy Route": {
@@ -160,9 +162,14 @@
     "description": "Angular Route with Children"
   },
 
+  "Angular @Input Property": {
+    "prefix": "ng-input",
+    "body": ["@Input() ${1:name}: ${2:type}"],
+    "description": "Angular @Input Property"
+  },
   "Angular @Output EventEmitter": {
     "prefix": "ng-output",
-    "body": ["@Output() ${1:name}= new EventEmitter<${1:type}>();"],
+    "body": ["@Output() ${1:name} = new EventEmitter<${2:type}>();"],
     "description": "Angular @Output EventEmitter"
   }
 }
