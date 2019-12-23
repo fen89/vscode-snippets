@@ -1,11 +1,11 @@
 {
   "Export Named Function": {
     "prefix": "js-export-fn-named",
-    "body": "export const ${1:functionName} = (${2:params}) => {\n\t$0\n};\n",
+    "body": "export const ${1:functionName} = (${2:params}) => {\n\t$0\n}\n",
     "description": "Export named function"
   },
   "Export Default Function": {
-    "prefix": "js-export-fn-default",
+    "prefix": "js-export-fn",
     "body": "export default (${1:params}) => {\n\t$0\n};\n",
     "description": "Export default function"
   },
@@ -16,7 +16,7 @@
   },
   "Export Default Extended Class": {
     "prefix": "js-export-class-extends",
-    "body": "export default class ${1:className} extends ${2:baseclassName} {\n\t$0\n};\n",
+    "body": "export default class ${1:className} extends ${2:baseClassName} {\n\t$0\n};\n",
     "description": "Export default class which extends a base one"
   },
 
@@ -31,33 +31,33 @@
     "description": "Creates a method inside a class"
   },
   "Getter": {
-    "prefix": "js-get",
-    "body": "get ${1:propertyName}() {\n\treturn this.${0};\n}",
+    "prefix": "js-getter",
+    "body": "get ${1:propertyName}() {\n\t${0}\n}",
     "description": "Creates a getter property inside a class"
   },
   "Setter": {
-    "prefix": "js-set",
-    "body": "set ${1:propertyName}(${2:value}) {\n\t${0};\n}",
+    "prefix": "js-setter",
+    "body": "set ${1:propertyName}(${2:value}) {\n\t${0}\n}",
     "description": "Creates a setter property inside a class"
   },
   "Array map": {
     "prefix": "js-map",
-    "body": "${1:array}.map(${2:currentItem} => {\n\t${0}\n});",
+    "body": "${1:array}.map(${2:currentItem} => {\n\t${0}\n})",
     "description": "Creates a map statement"
   },
   "Array flat map": {
     "prefix": "js-map-single",
-    "body": "${1:array}.map(${2:currentItem} => (${2:currentItem}.${3:property}));$0",
+    "body": "${1:array}.map(${2:currentItem} => (${2:currentItem}.${3:property}))",
     "description": "Creates a single line map statement"
   },
   "Array reducer": {
     "prefix": "js-reduce",
-    "body": "${1:array}.reduce((${2:previousItem}, ${3:currentItem}) => {\n\treturn ${0}\n});",
+    "body": "${1:array}.reduce((${2:previousItem}, ${3:currentItem}) => {\n\t${0}\n})",
     "description": "Creates a reducer statement"
   },
   "Array flat reducer": {
     "prefix": "js-reduce-single",
-    "body": "${1:array}.reduce((${2:previousItem}, ${3:currentItem}) => (${0});",
+    "body": "${1:array}.reduce((${2:previousItem}, ${3:currentItem}) => (${0})",
     "description": "Creates a single line reducer statement"
   }
 }
