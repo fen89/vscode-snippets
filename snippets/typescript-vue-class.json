@@ -2,32 +2,32 @@
   "Vue Property": {
     "prefix": "v-prop",
     "description": "Property",
-    "body": ["@Prop() readonly ${1:name}!: ${2:boolean};"]
+    "body": ["@Prop() readonly ${1:loading}!: ${2:boolean};"]
   },
   "Vue Property with default value": {
     "prefix": "v-prop-default",
     "description": "Property /w default value",
     "body": [
-      "@Prop({ default: ${3:'name'} }) readonly ${1:name}!: ${2:string};"
+      "@Prop({ default: ${3:false} }) readonly ${1:loading}!: ${2:boolean};"
     ]
   },
 
   "Vue Reactive Property": {
     "prefix": "v-prop-sync",
     "description": "Reactive Property",
-    "body": "@PropSync() readonly ${1:syncedName}!: ${2:string};"
+    "body": "@PropSync() readonly ${1:loading}!: ${2:boolean};"
   },
   "Vue Reactive Property with default value": {
     "prefix": "v-prop-sync-default",
     "description": "Reactive Property",
-    "body": "@PropSync({ default: ${3:'syncedName'} }) readonly ${1:name}!: ${2:boolean};"
+    "body": "@PropSync({ default: ${3:false} }) readonly ${1:loading}!: ${2:boolean};"
   },
 
   "Vue Model": {
     "prefix": "v-model",
     "description": "Model",
     "body": [
-      "@Model('${1:'change'}, { type: ${2/capitalize:type} }) readonly checked!: ${2/downcase:type};"
+      "@Model('${1:change}') readonly checked!: ${2:boolean};"
     ]
   },
 
@@ -36,15 +36,19 @@
     "description": "Watcher",
     "body": [
       "@Watch('${1:value}')",
-      "on${1/capitalize:value}Changed(value: ${2:Type}, oldValue: ${2:Type}) {$0}"
+      "on${1/(.*)/${1:/capitalize}/}Changed(value: ${2:string}, oldValue: ${2:string}) {",
+      "\t$0",
+      "}"
     ]
   },
   "Vue Watch Options": {
     "prefix": "v-watch-options",
     "description": "Watcher with default options",
     "body": [
-      "@Watch('${1:value}', { immediate: true, deep: true })",
-      "on${1/capitalize:value}Changed(value: ${2:Type}, oldValue: ${2:Type}) {$0}"
+      "@Watch('${1:value}', { immediate: ${3:true}, deep: ${4:true} })",
+      "on${1/(.*)/${1:/capitalize}/}Changed(value: ${2:string}, oldValue: ${2:string}) {",
+      "\t$0",
+      "}"
     ]
   },
 
