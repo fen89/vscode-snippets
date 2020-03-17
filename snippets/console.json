@@ -1,7 +1,7 @@
 {
   "Console Log": {
     "prefix": ["clog"],
-    "body": "console.log(${1:message})",
+    "body": "console.log($0)",
     "description": "Print message"
   },
   "Console Log Object": {
@@ -11,12 +11,12 @@
   },
   "Console Warning": {
     "prefix": ["cwarn"],
-    "body": "console.warn(`${1:string}`)",
+    "body": "console.warn($0)",
     "description": "Print warning"
   },
   "Console Count": {
     "prefix": ["ccount "],
-    "body": "console.count(`${1:string}`)",
+    "body": "console.count($0)",
     "description": "Count the occurences"
   },
   "Console Dir": {

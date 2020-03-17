@@ -11,12 +11,12 @@
   },
   "Export Default Class": {
     "prefix": "js-export-class",
-    "body": "export default class ${1:className} {\n\t$0\n};\n",
+    "body": "export default class ${1:className} {\n\t$0\n}\n",
     "description": "Export default class"
   },
   "Export Default Extended Class": {
     "prefix": "js-export-class-extends",
-    "body": "export default class ${1:className} extends ${2:baseClassName} {\n\t$0\n};\n",
+    "body": "export default class ${1:className} extends ${2:baseClassName} {\n\t$0\n}\n",
     "description": "Export default class which extends a base one"
   },
 

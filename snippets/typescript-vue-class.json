@@ -2,31 +2,31 @@
   "Vue Property": {
     "prefix": "v-prop",
     "description": "Property",
-    "body": ["@Prop() readonly ${1:loading}!: ${2:boolean};"]
+    "body": ["@Prop() readonly ${1:loading}!: ${2:boolean}"]
   },
   "Vue Property with default value": {
     "prefix": "v-prop-default",
     "description": "Property /w default value",
     "body": [
-      "@Prop({ default: ${3:false} }) readonly ${1:loading}!: ${2:boolean};"
+      "@Prop({ default: ${3:false} }) readonly ${1:loading}!: ${2:boolean}"
     ]
   },
 
   "Vue Reactive Property": {
     "prefix": "v-prop-sync",
     "description": "Reactive Property",
-    "body": "@PropSync() readonly ${1:loading}!: ${2:boolean};"
+    "body": "@PropSync() readonly ${1:loading}!: ${2:boolean}"
   },
   "Vue Reactive Property with default value": {
     "prefix": "v-prop-sync-default",
     "description": "Reactive Property",
-    "body": "@PropSync({ default: ${3:false} }) readonly ${1:loading}!: ${2:boolean};"
+    "body": "@PropSync({ default: ${3:false} }) readonly ${1:loading}!: ${2:boolean}"
   },
 
   "Vue Model": {
     "prefix": "v-model",
     "description": "Model",
-    "body": ["@Model('${1:change}') readonly checked!: ${2:boolean};"]
+    "body": ["@Model('${1:change}') readonly checked!: ${2:boolean}"]
   },
 
   "Vue Watch": {
