@@ -103,12 +103,12 @@
     ]
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.2.0",
-    "@commitlint/config-conventional": "^8.2.0",
-    "git-cz": "^3.3.0",
-    "husky": "^3.1.0",
-    "lint-staged": "^9.5.0",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "git-cz": "^4.3.1",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
     "prettier": "^1.19.1",
-    "standard-version": "^7.0.1"
+    "standard-version": "^7.1.0"
   }
 }
