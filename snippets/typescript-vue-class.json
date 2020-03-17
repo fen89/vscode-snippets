@@ -26,9 +26,7 @@
   "Vue Model": {
     "prefix": "v-model",
     "description": "Model",
-    "body": [
-      "@Model('${1:change}') readonly checked!: ${2:boolean};"
-    ]
+    "body": ["@Model('${1:change}') readonly checked!: ${2:boolean};"]
   },
 
   "Vue Watch": {
@@ -36,7 +34,7 @@
     "description": "Watcher",
     "body": [
       "@Watch('${1:value}')",
-      "on${1/(.*)/${1:/capitalize}/}Changed(value: ${2:string}, oldValue: ${2:string}) {",
+      "on${1/(.*)/${1:/capitalize}/}Changed(value: ${2:string}) {",
       "\t$0",
       "}"
     ]
@@ -46,7 +44,7 @@
     "description": "Watcher with default options",
     "body": [
       "@Watch('${1:value}', { immediate: ${3:true}, deep: ${4:true} })",
-      "on${1/(.*)/${1:/capitalize}/}Changed(value: ${2:string}, oldValue: ${2:string}) {",
+      "on${1/(.*)/${1:/capitalize}/}Changed(value: ${2:string}) {",
       "\t$0",
       "}"
     ]
