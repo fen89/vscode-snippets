@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.6](https://github.com/fen89/vscode-snippets/compare/v0.0.5...v0.0.6) (2021-10-12)
+
+
+### Features
+
+* 🎸 vue3 snippets ([0d9df5b](https://github.com/fen89/vscode-snippets/commit/0d9df5b1417eaaee9dbd75b944de717bab0b24ea))
+
 ### [0.0.5](https://github.com/fen89/vscode-snippets/compare/v0.0.4...v0.0.5) (2020-05-06)
 
 ### [0.0.4](https://github.com/fen89/vscode-snippets/compare/v0.0.3...v0.0.4) (2020-03-17)

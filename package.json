@@ -4,7 +4,7 @@
   "displayName": "Useful Snippets",
   "description": "Useful Snippets for VS Code",
   "icon": "images/code.png",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "repository": {
     "type": "git",
     "url": "https://github.com/fen89/vscode-snippets"
