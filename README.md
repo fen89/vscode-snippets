@@ -10,7 +10,7 @@ See the [CHANGELOG](CHANGELOG.md) for the latest changes.
 
 Type part of a snippet, press `enter` and the snippet unfolds. Pressing space at anytime shows the description and preview of a snippet.
 
-### General Snippets
+## General Snippets
 
 | Snippet          | Description                                                                                       |
 | ---------------- | ------------------------------------------------------------------------------------------------- |
@@ -27,13 +27,13 @@ Type part of a snippet, press `enter` and the snippet unfolds. Pressing space at
 | `cerror`         | Print error: `console.error(object)`                                                              |
 | `ctable`         | Print a collection as table: `console.table(collection)`                                          |
 
-### Typescript Snippets
+## Typescript Snippets
 
 | Snippet    | Description                             |
 | ---------- | --------------------------------------- |
 | `ts-class` | Class with `Partial` constructor assign |
 
-### Angular Typescript Snippets
+## Angular Snippets
 
 | Snippet                  | Description                                |
 | ------------------------ | ------------------------------------------ |
@@ -50,60 +50,108 @@ Type part of a snippet, press `enter` and the snippet unfolds. Pressing space at
 | `ng-route-eager`         | Eager loaded Route                         |
 | `ng-route-lazy`          | Lazy loaded Route (with new import syntax) |
 | `ng-route-children`      | Route with children                        |
-| `ng-output`              | `@Output`event emitter                     |
+| `ng-output`              | `@Output` event emitter                     |
 
-### Vue Typescript Snippets
+## Vue 3 Snippets
+
+### General
+
+
+| Snippet                        | Description                                    |
+| ------------------------------ | ---------------------------------------------- |
+| `vue-sfc`                      | Vue Single File Component                      |
+ 
+### Javascript / Typescript
+
+| Snippet                               | Description                                             |
+| ------------------------------------- | ------------------------------------------------------- |
+| `vue-import-component`                | Import a component                                      |
+| `vue-import-component-dynamic`        | Import a lazy loaded component                          |
+| `vue-import-lib`                      | Import a library                                        |
+| `vue-define-component`                | Vue Typescript component                                |
+| `vue-test`                            | Unit test Single File Component                         |
+| `vue-prop`                            | Vue Composition API - prop                              |
+| `vue-ref`                             | Vue Composition API - ref                               |
+| `vue-reactive`                        | Vue Composition API - reactive                          |
+| `vue-computed`                        | Vue Composition API - computed                          |
+| `vue-watch`                           | Vue Composition API - `watch()` for single source       |
+| `vue-watch-array`                     | Vue Composition API - `watch()` for array of sources    |
+| `vue-watcheffect`                     | Vue Composition API - `watchEffect()`method             |
+| `vue-life-onmounted`                  | Vue Composition API - `onMounted()` Lifecycle hook      |
+| `vue-life-onbeforemount`              | Vue Composition API - `onBeforeMount()` Lifecycle hook  |
+| `vue-life-onbeforeupdate`             | Vue Composition API - `onBeforeUpdate()` Lifecycle hook |
+| `vue-life-onupdated`                  | Vue Composition API - `onUpdated()` Lifecycle hook      |
+| `vue-life-onerrorcaptured`            | Vue Composition API - `onErrorCaptured()` Lifecycle hook|
+| `vue-life-onbeforeunmount`            | Vue Composition API - `onBeforeUnmount()` Lifecycle hook|
+| `vue-life-onunmounted`                | Vue Composition API - `onUnmounted()` Lifecycle hook    |
+
+### Html
+
+Before these snippets started with only `v-`. New syntax starts with `vue-`.
+
+| Snippet            | Description                                        |
+| ----------------   | -------------------------------------------------- |
+| `vue-html`         | Bind HTML directly to an element with `:html`      |
+| `vue-class`        | Bind CSS class to an element with `:class`         |
+| `vue-if`           | Conditional statement                              |
+| `vue-if-else`      | Conditional statement with else clause             |
+| `vue-if-else-if`   | Conditional statement with else-if and else clause |
+| `vue-show`         | Displaying or hiding an element with `v:show`      |
+| `vue-for`          | Loop                                               |
+| `vue-for-index`    | Indexed loop                                       |
+| `vue-for-object`   | L                                                  |
+| `vue-for-range`    | Loop over a range                                  |
+| `vue-on`           | Event Listener                                     |
+| `vue-on-args`      | Event Listener with arguments                      |
+| `vue-on-modified`  | Event Listener with event modifier                 |
+| `vue-model`        | Model                                              |
+| `vue-model-number` | Model with type number                             |
+
+
+## Vue 2 Snippets
+
+### General
+
+| Snippet                        | Description                                    |
+| ------------------------------ | ---------------------------------------------- |
+| `vue2-component`               | Vue Class Component                            |
+
+
+### Typescript
 
 | Snippet              | Description                                                       |
 | -------------------- | ----------------------------------------------------------------- |
-| `v-global-component` | Register a global component                                       |
-| `v-router-class`     | Router Class                                                      |
-| `v-route-default`    | Default Route                                                     |
-| `v-route-eager`      | Eager loaded Route                                                |
-| `v-route-lazy`       | Lazy loaded Route                                                 |
-| `v-route-children`   | Route with children                                               |
-| `v-component`        | Component with `vue-class-component` and `vue-property-decorator` |
-| `v-store`            | Dynamic Vuex Store                                                |
-| `v-store-module`     | Dynamic Vuex Store Module                                         |
-| `v-model`            | Interface and class with `create` and `update` functions          |
+| `vue2-global-component` | Register a global component                                       |
+| `vue2-router-class`     | Router Class                                                      |
+| `vue2-route-default`    | Default Route                                                     |
+| `vue2-route-eager`      | Eager loaded Route                                                |
+| `vue2-route-lazy`       | Lazy loaded Route                                                 |
+| `vue2-route-children`   | Route with children                                               |
+| `vue2-component`        | Component with `vue-class-component` and `vue-property-decorator` |
+| `vue2-store`            | Dynamic Vuex Store                                                |
+| `vue2-store-module`     | Dynamic Vuex Store Module                                         |
+| `vue2-model`            | Interface and class with `create` and `update` functions          |
 
-### Vue Typescript Class Component Snippets
+### Typescript Class Component
 
-All of them need a reference to `vue-property-decorator`
+All of them need a reference to `vue-property-decorator`.
 
-| Snippet               | Description                                    |
-| --------------------- | ---------------------------------------------- |
-| `v-prop`              | Property                                       |
-| `v-prop-default`      | Property with default value                    |
-| `v-prop-sync`         | Reactive Property                              |
-| `v-prop-sync-default` | Reactive Property with default value           |
-| `v-model`             | Model                                          |
-| `v-watch`             | Watcher                                        |
-| `v-watch-options`     | Watcher with default options                   |
-| `v-emit`              | Event Emitter - method name is used as `$emit` |
-| `v-emit-self`         | Event Emitter - name is used as `$emit`        |
-| `v-ref`               | Reference to another component                 |
-| `v-ref-key`           | Reference to another HTML element              |
+Prior these snippets started with only `v-`. New syntax starts with `vue2-class-` as these are legacy snippets.
 
-### Vue Html Snippets
-
-| Snippet          | Description                                        |
-| ---------------- | -------------------------------------------------- |
-| `v-html`         | Bind HTML directly to an element with `:html`      |
-| `v-class`        | Bind CSS class to an element with `:class`         |
-| `v-if`           | Conditional statement                              |
-| `v-if-else`      | Conditional statement with else clause             |
-| `v-if-else-if`   | Conditional statement with else-if and else clause |
-| `v-show`         | Displaying or hiding an element with `v:show`      |
-| `v-for`          | Loop                                               |
-| `v-for-index`    | Indexed loop                                       |
-| `v-for-object`   | L                                                  |
-| `v-for-range`    | Loop over a range                                  |
-| `v-on`           | Event Listener                                     |
-| `v-on-args`      | Event Listener with arguments                      |
-| `v-on-modified`  | Event Listener with event modifier                 |
-| `v-model`        | Model                                              |
-| `v-model-number` | Model with type number                             |
+| Snippet                        | Description                                    |
+| ------------------------------ | ---------------------------------------------- |
+| `vue2-component`               | Generates a vue single class component         |
+| `vue2-class-prop`              | Property                                       |
+| `vue2-class-prop-default`      | Property with default value                    |
+| `vue2-class-prop-sync`         | Reactive Property                              |
+| `vue2-class-prop-sync-default` | Reactive Property with default value           |
+| `vue2-class-model`             | Model                                          |
+| `vue2-class-watch`             | Watcher                                        |
+| `vue2-class-watch-options`     | Watcher with default options                   |
+| `vue2-class-emit`              | Event Emitter - method name is used as `$emit` |
+| `vue2-class-emit-self`         | Event Emitter - name is used as `$emit`        |
+| `vue2-class-ref`               | Reference to another component                 |
+| `vue2-class-ref-key`           | Reference to another HTML element              |
 
 ## Emmet
 

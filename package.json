@@ -55,27 +55,31 @@
       },
       {
         "language": "typescript",
-        "path": "./snippets/typescript-angular.json"
+        "path": "./snippets/angular.json"
       },
       {
         "language": "vue",
         "path": "./snippets/vue.json"
       },
       {
-        "language": "typescript",
-        "path": "./snippets/typescript-vue.json"
+        "language": "vue",
+        "path": "./snippets/vue2.json"
       },
       {
         "language": "typescript",
-        "path": "./snippets/typescript-vue-class.json"
+        "path": "./snippets/vue2-typescript.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/vue2-typescript-class.json"
       },
       {
         "language": "vue-html",
-        "path": "./snippets/vue-html.json"
+        "path": "./snippets/vue-template.json"
       },
       {
         "language": "html",
-        "path": "./snippets/vue-html.json"
+        "path": "./snippets/vue-template.json"
       }
     ]
   },

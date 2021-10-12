@@ -1,12 +1,12 @@
 {
   "Vue Global Component": {
-    "prefix": "v-global-component",
+    "prefix": "vue2-global-component",
     "body": ["Vue.component('${1:name}', ${2:Component})"],
     "description": "Register global component"
   },
 
   "Vue Router Class": {
-    "prefix": "v-router-class",
+    "prefix": "vue2-router-class",
     "description": "Vue Router File",
     "body": [
       "import Vue from 'vue'",
@@ -26,26 +26,26 @@
     ]
   },
   "Vue Default Route": {
-    "prefix": "v-route-default",
+    "prefix": "vue2-route-default",
     "body": ["{ path: '', redirect: '${1:path}' }"],
     "description": "Vue Default Route"
   },
   "Vue Eager Route": {
-    "prefix": "v-route-eager",
+    "prefix": "vue2-route-eager",
     "body": [
       " { path: '${1:path}', name: '${2:name}', component: ${3:NameComponent}}"
     ],
     "description": "Vue Default Route"
   },
   "Vue Lazy Route": {
-    "prefix": "v-route-lazy",
+    "prefix": "vue2-route-lazy",
     "body": [
       "{ path: '${1:path}', name: '${2:name}', component: () => import(/* webpackChunkName: \\\"${2:example}\\\" */ '${1:pathToComponent}')"
     ],
     "description": "Vue Lazy Route"
   },
   "Vue Route with Children": {
-    "prefix": "v-route-children",
+    "prefix": "vue2-route-children",
     "body": [
       "{ path: '${1:path}', component: ${1:Component},",
       "      children: [",
@@ -57,7 +57,7 @@
   },
 
   "Vuex Store": {
-    "prefix": "v-store",
+    "prefix": "vue2-store",
     "description": "Vuex store",
     "body": [
       "import Vue from 'vue'",
@@ -80,7 +80,7 @@
     ]
   },
   "Vuex Store Module": {
-    "prefix": "v-store-module",
+    "prefix": "vue2-store-module",
     "description": "Vuex store module",
     "body": [
       "import { Action, Module, Mutation, VuexModule } from 'vuex-module-decorators'",
@@ -99,7 +99,7 @@
     ]
   },
   "Vuex Store Module with default values": {
-    "prefix": "v-store-module-default",
+    "prefix": "vue2-store-module-default",
     "description": "Vuex store module",
     "body": [
       "import { Action, Module, Mutation, VuexModule } from 'vuex-module-decorators'",
@@ -143,7 +143,7 @@
     ]
   },
   "Vuex Store Model": {
-    "prefix": "v-store-model",
+    "prefix": "vue2-store-model",
     "description": "Vuex store model",
     "body": [
       "export interface I${1:Name} {",

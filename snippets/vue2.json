@@ -1,0 +1,24 @@
+{
+  "Vue Class Component": {
+    "prefix": "vue2-class-component",
+    "description": "Vue Class Component",
+    "body": [
+      "<template>",
+      "  <p>${1:Component} is working!</p>",
+      "</template>",
+      "",
+      "<script lang=\"ts\">",
+      "import Vue from 'vue';",
+      "import Component from 'vue-class-component';",
+      "import { Prop } from 'vue-property-decorator';",
+      "",
+      "@Component({",
+      "\tname: '${1:Component}'",
+      "})",
+      "export default class ${1:Component} extends Vue {",
+      "\t$0",
+      "}",
+      "</script>"
+    ]
+  }
+}

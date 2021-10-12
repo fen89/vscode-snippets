@@ -1,24 +1,28 @@
 {
-  "Vue Class Component": {
-    "prefix": "v-component",
-    "description": "Vue Class Component",
+  "Vue Single File Component": {
+    "prefix": "vue-sfc",
     "body": [
       "<template>",
-      "  <p>${1:Component} is working!</p>",
+      "\t<div>",
+      "",
+      "\t</div>",
       "</template>",
       "",
       "<script lang=\"ts\">",
-      "import Vue from 'vue';",
-      "import Component from 'vue-class-component';",
-      "import { Prop } from 'vue-property-decorator';",
+      "import { defineComponent } from 'vue';",
       "",
-      "@Component({",
-      "\tname: '${1:Component}'",
+      "export default defineComponent({",
+      "\tsetup () {",
+      "\t\t${0}\n",
+      "\t\treturn {}",
+      "\t}",
       "})",
-      "export default class ${1:Component} extends Vue {",
-      "\t$0",
-      "}",
-      "</script>"
-    ]
+      "</script>",
+      "",
+      "<style lang=\"scss\" scoped>",
+      "",
+      "</style>"
+    ],
+    "description": "Single File Component with Typescript and scss"
   }
 }

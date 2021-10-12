@@ -1,11 +1,11 @@
 {
   "Vue Property": {
-    "prefix": "v-prop",
+    "prefix": "vue2-class-prop",
     "description": "Property",
     "body": ["@Prop() readonly ${1:loading}!: ${2:boolean}"]
   },
   "Vue Property with default value": {
-    "prefix": "v-prop-default",
+    "prefix": "vue2-class-prop-default",
     "description": "Property /w default value",
     "body": [
       "@Prop({ default: ${3:false} }) readonly ${1:loading}!: ${2:boolean}"
@@ -13,24 +13,24 @@
   },
 
   "Vue Reactive Property": {
-    "prefix": "v-prop-sync",
+    "prefix": "vue2-class-prop-sync",
     "description": "Reactive Property",
     "body": "@PropSync() readonly ${1:loading}!: ${2:boolean}"
   },
   "Vue Reactive Property with default value": {
-    "prefix": "v-prop-sync-default",
+    "prefix": "vue2-class-prop-sync-default",
     "description": "Reactive Property",
     "body": "@PropSync({ default: ${3:false} }) readonly ${1:loading}!: ${2:boolean}"
   },
 
   "Vue Model": {
-    "prefix": "v-model",
+    "prefix": "vue2-class-model",
     "description": "Model",
     "body": ["@Model('${1:change}') readonly checked!: ${2:boolean}"]
   },
 
   "Vue Watch": {
-    "prefix": "v-watch",
+    "prefix": "vue2-class-watch",
     "description": "Watcher",
     "body": [
       "@Watch('${1:value}')",
@@ -40,7 +40,7 @@
     ]
   },
   "Vue Watch Options": {
-    "prefix": "v-watch-options",
+    "prefix": "vue2-class-watch-options",
     "description": "Watcher with default options",
     "body": [
       "@Watch('${1:value}', { immediate: ${3:true}, deep: ${4:true} })",
@@ -51,23 +51,23 @@
   },
 
   "Vue Emit Self": {
-    "prefix": "v-emit-self",
+    "prefix": "vue2-class-emit-self",
     "description": "Event Emitter - method name is used as $emit",
     "body": ["@Emit()", "${1:method}() {", "\t$0", "}"]
   },
   "Vue Emit": {
-    "prefix": "v-emit",
+    "prefix": "vue2-class-emit",
     "description": "Event Emitter - name is used as $emit",
     "body": ["@Emit('${1:name}')", "${2:method}() {", "\t$0", "}"]
   },
 
   "Vue Ref": {
-    "prefix": "v-ref",
+    "prefix": "vue2-class-ref",
     "description": "Reference to another component",
     "body": ["@Ref() readonly ${1:name}!: ${2:component}"]
   },
   "Vue Ref Key": {
-    "prefix": "v-ref-key",
+    "prefix": "vue2-class-ref-key",
     "description": "Reference to another HTML element",
     "body": ["@Ref('${1:key}') readonly ${2:name}!: ${3:HTMLElement}"]
   }

@@ -15,7 +15,7 @@
     "description": "Print warning"
   },
   "Console Count": {
-    "prefix": ["ccount "],
+    "prefix": ["ccount"],
     "body": "console.count($0)",
     "description": "Count the occurences"
   },

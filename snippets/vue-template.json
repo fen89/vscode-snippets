@@ -1,0 +1,67 @@
+{
+  "Vue v-if": {
+    "prefix": "vue-vif",
+    "body": ["<${1:div} v-if=\"${2:expression}\">", "\t$0", "<${1:div}>"],
+    "description": "v-if statement"
+  },
+  "Vue v-show": {
+    "prefix": "vue-vshow",
+    "body": ["<${1:div} v-show=\"${2:expression}\">", "\t$0", "<${1:div}>"],
+    "description": "Vue show statement"
+  },
+  "Vue v-for": {
+    "prefix": "vue-vfor",
+    "scope": "vue-html",
+    "body": [
+      "<${1:div} v-for=\"${2:item} in ${2:item}s\" :key=\"${2:item}.id\">",
+      "\t{{ ${2:item} }}",
+      "</${1:div}>"
+    ],
+    "description": "Vue v-for loop"
+  },
+  "Vue v-model": {
+    "prefix": "vue-vmodel",
+    "scope": "vue-html",
+    "body": ["<input v-model=\"${1:data}\" type=\"text\" />"],
+    "description": "Vue v-model"
+  },
+  "Vue v-on": {
+    "prefix": "vue-on",
+    "body": ["@${1:event}=\"${2:handler}"],
+    "description": "v-on handler"
+  },
+  "Vue Style Binding": {
+    "prefix": "vue-style",
+    "scope": "vue-html",
+    "body": ["<${1:div} :style=\"{ fontSize: ${2:data} + 'px' }\"></${1:div}>"],
+    "description": "Vue inline style binding"
+  },
+  "Vue Style Binding Object": {
+    "prefix": "vue-style-obj",
+    "scope": "vue-html",
+    "body": [
+      "<${1:div} :style=\"[${2:styleObjectA}, ${3:styleObjectB]}\"></${1:div}>"
+    ],
+    "description": "Vue inline style binding, objects"
+  },
+  "Vue Class Binding": {
+    "prefix": "vue-class",
+    "scope": "vue-html",
+    "body": ["<${1:div} :class=\"{ ${2:className}: ${3:data} }\"></${1:div}>"],
+    "description": "Vue class binding"
+  },
+  "Vue Path Routing Link": {
+    "prefix": "vue-route-path",
+    "scope": "vue-html",
+    "body": ["<router-link to=\"${1:path}\">${2:LinkTitle}</router-link>"],
+    "description": "Vue Path routing link"
+  },
+  "Vue Named Routing Link": {
+    "prefix": "vue-route-name",
+    "scope": "vue-html",
+    "body": [
+      "<router-link :to=\"{name: '${1:name}'}\">${2:LinkTitle}</router-link>"
+    ],
+    "description": "Vue Named routing link"
+  }
+}

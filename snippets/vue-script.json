@@ -1,0 +1,129 @@
+{
+  "Vue Import Component": {
+    "prefix": "vue-import-component",
+    "body": ["import ${1:Component} from '${2:Path}/${1:Component}.vue';"],
+    "description": "Import a component"
+  },
+  "Vue Import Component Dynamically": {
+    "prefix": "vue-import-component-dynamic",
+    "body": ["${1:Component} = () => import('${2:Path}/${1:Component}.vue')"],
+    "description": "Import a lazy loaded component"
+  },
+  "Vue Import Library": {
+    "prefix": "vue-import-lib",
+    "body": ["import { ${1:libName} } from '${1:libName}';"],
+    "description": "Import a library"
+  },
+  "Unit Test": {
+    "prefix": "vue-test",
+    "body": [
+      "import Vue from 'vue';",
+      "import ${1:Component} from './${1:Component}.vue';",
+      "",
+      "describe('${1:Component}.vue', () => {",
+      "\tit('${2:should render correct contents}', () => {",
+      "\t\tconst Constructor = Vue.extend(${1:Component});",
+      "\t\tconst vm = new Constructor().$mount();",
+      "\t\texpect(vm.$el.querySelector('.hello h1').textContent)",
+      "\t\t\t.to.equal(${3:'Welcome to Your Vue.js App'});",
+      "\t});",
+      "});"
+    ],
+    "description": "Unit test a component"
+  },
+  "Vue Prop": {
+    "prefix": "vue-prop",
+    "body": "${1:active}: { type: ${2:Boolean}, default: ${3:false} },${0}",
+    "description": "Vue Prop"
+  },
+  "Vue Composition API - Define Component": {
+    "prefix": "vue-define-component",
+    "body": [
+      "export default defineComponent({",
+      "\tname: '${1:Name}',",
+      "\tprops: {",
+      "\t\t${0}",
+      "\t},",
+      "\tsetup (props) {",
+      "\t\t\n",
+      "\t\treturn {}",
+      "\t}",
+      "})"
+    ],
+    "description": "Vue Composition API - reactive"
+  },
+  "Vue Composition API - Reactive": {
+    "prefix": "vue-reactive",
+    "body": ["const ${1:name} = reactive({", "\t${2:count}: ${3:0}", "})"],
+    "description": "Vue Composition API - reactive"
+  },
+  "Vue Composition API - Computed": {
+    "prefix": "vue-computed",
+    "body": ["const ${1:name} = computed(() => ${0})"],
+    "description": "Vue Composition API - computed"
+  },
+  "Vue Composition API - Watch - single": {
+    "prefix": "vue-watch",
+    "body": ["watch(${1:value}, (${2:value}) => {", "\t${0}", "})"],
+    "description": "Vue Composition API - Watcher for single source"
+  },
+  "Vue Composition API - Watch Compare - single": {
+    "prefix": "vue-watch-compare",
+    "body": ["watch(${1:value}, (newValue, oldValue) => {", "\t${2}", "})"],
+    "description": "Vue Composition API - Watcher for single source"
+  },
+  "Vue Composition API - Watch - array": {
+    "prefix": "vue-watch-array",
+    "body": [
+      "watch([${1:foo}, ${2:bar}], ([new${1}, new${2}], [prev${1}, prev${2}]) => {",
+      "\t${3}",
+      "})"
+    ],
+    "description": "Vue Composition API - Watcher for array of sources"
+  },
+  "Vue Composition API - watchEffect": {
+    "prefix": "vue-watcheffect",
+    "body": ["watchEffect(() => {", "\t${1}", "})"],
+    "description": "Vue Composition API - Watch Effect"
+  },
+  "Vue Composition API - Vue ref": {
+    "prefix": "vue-ref",
+    "body": ["const ${1:name} = ref(${2:initialValue})"],
+    "description": "Vue Ref"
+  },
+  "Vue Composition API - Lifecycle Hooks - onMounted": {
+    "prefix": "vue-life-onmounted",
+    "body": ["onMounted(() => {${1}})"],
+    "description": "Vue Mounted Lifecycle hook"
+  },
+  "Vue Composition API - Vue Lifecycle Hooks - onBeforeMount": {
+    "prefix": "v3-life-onbeforemount",
+    "body": ["onBeforeMount(() => {${1}})"],
+    "description": "Vue onBeforeMount Lifecycle hook"
+  },
+  "Vue Composition API - Vue Lifecycle Hooks - onBeforeUpdate": {
+    "prefix": "vue-life-onbeforeupdate",
+    "body": ["onBeforeUpdate(() => {${1}})"],
+    "description": "Vue onBeforeUpdate Lifecycle hook"
+  },
+  "Vue Composition API - Vue Lifecycle Hooks - onUpdated": {
+    "prefix": "vue-life-onupdated",
+    "body": ["onUpdated(() => {${1}})"],
+    "description": "Vue onUpdated Lifecycle hook"
+  },
+  "Vue Composition API - Vue Lifecycle Hooks - onErrorCaptured": {
+    "prefix": "vue-life-onerrorcaptured",
+    "body": ["onErrorCaptured(() => {${1}})"],
+    "description": "Vue onErrorCaptured Lifecycle hook"
+  },
+  "Vue Composition API - Vue Lifecycle Hooks - onUnmounted": {
+    "prefix": "vue-life-onunmounted",
+    "body": ["onUnmounted(() => {${1}})"],
+    "description": "(destroyed) Vue onUnmounted Lifecycle hook"
+  },
+  "Vue Composition API -  Vue Lifecycle Hooks - onBeforeUnmount": {
+    "prefix": "vue-life-onbeforeunmount",
+    "body": ["onBeforeUnmount(() => {${1}})"],
+    "description": "(beforeDestroy) Vue onBeforeUnmount Lifecycle hook"
+  }
+}
